@@ -2,162 +2,264 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>العرَّاف | الرئيسية</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5681910137928321"
-     crossorigin="anonymous"></script>
+    
     <style>
-        /* تثبيت مشاكل الموبايل */
+        /* ========== التصميم الأساسي ========== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
         }
-        
+
         body {
-            overflow-x: hidden !important;
-            width: 100% !important;
+            background: radial-gradient(circle at 10% 20%, #0a0a1a, #03010a);
+            font-family: 'Segoe UI', 'Tahoma', system-ui, sans-serif;
+            color: #f0eef7;
+            padding: 15px;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
-        
+
         .container {
-            width: 100% !important;
-            max-width: 100% !important;
-            padding: 0 10px !important;
-            overflow-x: hidden !important;
+            max-width: 500px;
+            margin: 0 auto;
+            width: 100%;
         }
-        
-        /* تثبيت شبكة الأزرار في الموبايل */
-        @media (max-width: 768px) {
-            .buttons-grid {
-                display: grid !important;
-                grid-template-columns: repeat(2, 1fr) !important;
-                gap: 10px !important;
-            }
-            
-            .magic-card {
-                padding: 10px 5px !important;
-            }
-            
-            .magic-icon {
-                font-size: 1.6rem !important;
-            }
-            
-            .magic-card h3 {
-                font-size: 0.7rem !important;
-            }
-            
-            .magic-card p {
-                display: none !important;
-            }
-            
-            .date-select-group {
-                flex-direction: column !important;
-                gap: 8px !important;
-            }
-            
-            .result-area {
-                font-size: 0.75rem !important;
-                padding: 12px !important;
-            }
-            
-            .share-buttons {
-                flex-wrap: wrap !important;
-                gap: 5px !important;
-            }
-            
-            .share-btn {
-                padding: 4px 8px !important;
-                font-size: 0.6rem !important;
-            }
-            
-            h1 {
-                font-size: 1.5rem !important;
-            }
-            
-            .main-logo, .sidebar-logo {
-                width: 65px !important;
-                height: 65px !important;
-            }
-            
-            .card {
-                padding: 15px !important;
-                border-radius: 25px !important;
-            }
-            
-            .magic-btn {
-                font-size: 0.85rem !important;
-                padding: 10px !important;
-            }
-            
-            input, select {
-                font-size: 14px !important;
-                padding: 10px !important;
-            }
-            
-            /* القائمة الجانبية */
-            .sidebar {
-                width: 260px !important;
-                right: -260px !important;
-            }
-            
-            .menu-toggle {
-                width: 42px !important;
-                height: 42px !important;
-                font-size: 1.3rem !important;
-                top: 12px !important;
-                right: 12px !important;
-            }
+
+        /* الشعار */
+        .logo-header {
+            text-align: center;
+            margin-bottom: 25px;
         }
-        
-        /* للأجهزة الصغيرة جداً */
-        @media (max-width: 480px) {
-            .buttons-grid {
-                gap: 8px !important;
-            }
-            
-            .magic-icon {
-                font-size: 1.4rem !important;
-            }
-            
-            .magic-card h3 {
-                font-size: 0.65rem !important;
-            }
-            
-            .sidebar {
-                width: 240px !important;
-                right: -240px !important;
-            }
+
+        .main-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #b87eff;
+            margin-bottom: 10px;
+            object-fit: cover;
         }
-        
-        /* للتابلت */
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .buttons-grid {
-                grid-template-columns: repeat(3, 1fr) !important;
-            }
-            
-            .container {
-                max-width: 90% !important;
-            }
+
+        h1 {
+            font-size: 1.8rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f0dbff, #b87eff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
-        
-        /* للكمبيوتر */
-        @media (min-width: 1025px) {
-            .buttons-grid {
-                grid-template-columns: repeat(4, 1fr) !important;
-            }
-            
-            .container {
-                max-width: 1000px !important;
-            }
+
+        .slogan {
+            text-align: center;
+            color: #bba9ff;
+            font-size: 0.75rem;
+        }
+
+        /* شبكة الأزرار */
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .magic-card {
+            background: rgba(20, 12, 45, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 12px 8px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            border: 1px solid rgba(184, 126, 255, 0.3);
+            transition: all 0.2s;
+            display: block;
+        }
+
+        .magic-card:active {
+            transform: scale(0.97);
+        }
+
+        .magic-icon {
+            font-size: 1.8rem;
+            margin-bottom: 6px;
+        }
+
+        .magic-card h3 {
+            font-size: 0.75rem;
+            color: #d4bbff;
+        }
+
+        .vip-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 165, 0, 0.1));
+            border-color: #ffd700;
+        }
+
+        /* الاقتباس */
+        .daily-quote {
+            background: rgba(184, 126, 255, 0.1);
+            border-radius: 30px;
+            padding: 12px 15px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .daily-quote p {
+            font-size: 0.8rem;
+            color: #d4bbff;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.6rem;
+            color: #5e4e7e;
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .tiktok-credit a {
+            color: #b87eff;
+            text-decoration: none;
+        }
+
+        /* ========== القائمة الجانبية ========== */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -280px;
+            width: 260px;
+            height: 100%;
+            background: linear-gradient(180deg, #0a081a, #120e2a);
+            z-index: 9999;
+            transition: right 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .sidebar.open {
+            right: 0;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(184, 126, 255, 0.2);
+        }
+
+        .sidebar-logo {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            margin-bottom: 8px;
+            object-fit: cover;
+        }
+
+        .sidebar-header h3 {
+            color: #b87eff;
+            font-size: 1.1rem;
+        }
+
+        .sidebar-close {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: none;
+            border: none;
+            color: #b87eff;
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            padding: 15px 0;
+            flex: 1;
+        }
+
+        .sidebar-menu li a {
+            display: block;
+            padding: 10px 20px;
+            color: #e0d6ff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .sidebar-menu li a:hover {
+            background: rgba(184, 126, 255, 0.1);
+            padding-right: 25px;
+        }
+
+        .sidebar-footer {
+            padding: 15px;
+            text-align: center;
+            border-top: 1px solid rgba(184, 126, 255, 0.2);
+            font-size: 0.7rem;
+        }
+
+        /* زر فتح القائمة */
+        .menu-toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #6b2eb3, #391d66);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 9998;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* طبقة الخلفية */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9997;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* النجوم والدخان */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .smoke {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(transparent, rgba(128, 0, 255, 0.08));
+            filter: blur(20px);
+            pointer-events: none;
+            z-index: 0;
         }
     </style>
-    <link rel="stylesheet" href="vendor/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/sidebar.css">
 </head>
 <body>
 
@@ -166,109 +268,135 @@
 
 <div class="container">
     <div class="logo-header">
-        <img src="images/logo.jpg" alt="العرَّاف" class="main-logo">
+        <img src="images/logo.jpg" alt="العرَّاف" class="main-logo" onerror="this.src='https://via.placeholder.com/80x80/6b2eb3/ffffff?text=Al3rraf'">
         <h1>🔮 العرَّاف</h1>
         <p class="slogan">✦ أسرار برجك وطاقة روحك ✦</p>
     </div>
 
-    <!-- الأزرار الرئيسية 12 زر -->
     <div class="buttons-grid">
-        <a href="pages/zodiac.html" class="magic-card">
-            <div class="magic-icon">⭐</div>
-            <h3>أسرار برجك</h3>
-            <p>اكتشف شخصيتك ومستقبلك</p>
-        </a>
-
-        <a href="pages/couples.html" class="magic-card">
-            <div class="magic-icon">💑</div>
-            <h3>Couples</h3>
-            <p>توافق الأبراج والحب</p>
-        </a>
-
-        <a href="pages/daily-horoscope.html" class="magic-card">
-            <div class="magic-icon">☀️</div>
-            <h3>حظك اليوم</h3>
-            <p>توقعات يومية محدثة</p>
-        </a>
-
-        <a href="pages/lucky-numbers.html" class="magic-card">
-            <div class="magic-icon">🔢</div>
-            <h3>أرقام الحظ</h3>
-            <p>أرقامك المحظوظة اليوم</p>
-        </a>
-
-        <a href="pages/dream-interpretation.html" class="magic-card">
-            <div class="magic-icon">💭</div>
-            <h3>تفسير الأحلام</h3>
-            <p>اعرف معنى حلمك</p>
-        </a>
-
-        <a href="pages/tarot-reading.html" class="magic-card">
-            <div class="magic-icon">🎴</div>
-            <h3>قراءة التاروت</h3>
-            <p>بطاقات التاروت تكشف المستقبل</p>
-        </a>
-
-        <a href="pages/age-calculator.html" class="magic-card">
-            <div class="magic-icon">📅</div>
-            <h3>احسب عمرك</h3>
-            <p>كم يوماً تعيش على الأرض؟</p>
-        </a>
-
-        <a href="pages/luck-game.html" class="magic-card">
-            <div class="magic-icon">🎲</div>
-            <h3>لعبة الحظ</h3>
-            <p>اكتشف ما يخفيه مستقبلك</p>
-        </a>
-        <a href="pages/blog.html" class="magic-card">
-            <div class="magic-icon">📚</div>
-             <h3>دليل الأبراج</h3>
-            <p>تعرف على صفات كل برج وأسراره</p>
-        </a>
-        <a href="pages/vip.html" class="magic-card vip-card">
-            <div class="magic-icon">👑</div>
-            <h3>Al3rraf VIP</h3>
-            <p>خدمات حصرية ومميزة</p>
-        </a>
-
-        <a href="pages/about.html" class="magic-card">
-            <div class="magic-icon">📖</div>
-            <h3>عن العرَّاف</h3>
-            <p>تعرف علينا أكثر</p>
-        </a>
-
-        <a href="pages/contact.html" class="magic-card">
-            <div class="magic-icon">📞</div>
-            <h3>اتصل بنا</h3>
-            <p>تواصل معنا</p>
-        </a>
-
+        <a href="pages/zodiac.html" class="magic-card"><div class="magic-icon">⭐</div><h3>أسرار برجك</h3></a>
+        <a href="pages/couples.html" class="magic-card"><div class="magic-icon">💑</div><h3>Couples</h3></a>
+        <a href="pages/daily-horoscope.html" class="magic-card"><div class="magic-icon">☀️</div><h3>حظك اليوم</h3></a>
+        <a href="pages/lucky-numbers.html" class="magic-card"><div class="magic-icon">🔢</div><h3>أرقام الحظ</h3></a>
+        <a href="pages/dream-interpretation.html" class="magic-card"><div class="magic-icon">💭</div><h3>تفسير الأحلام</h3></a>
+        <a href="pages/tarot-reading.html" class="magic-card"><div class="magic-icon">🎴</div><h3>قراءة التاروت</h3></a>
+        <a href="pages/age-calculator.html" class="magic-card"><div class="magic-icon">📅</div><h3>احسب عمرك</h3></a>
+        <a href="pages/luck-game.html" class="magic-card"><div class="magic-icon">🎲</div><h3>لعبة الحظ</h3></a>
+        <a href="pages/blog.html" class="magic-card"><div class="magic-icon">📚</div><h3>دليل الأبراج</h3></a>
+        <a href="pages/vip.html" class="magic-card vip-card"><div class="magic-icon">👑</div><h3>Al3rraf VIP</h3></a>
+        <a href="pages/about.html" class="magic-card"><div class="magic-icon">📖</div><h3>عن العرَّاف</h3></a>
+        <a href="pages/contact.html" class="magic-card"><div class="magic-icon">📞</div><h3>اتصل بنا</h3></a>
     </div>
 
-    <!-- اقتباس يومي -->
     <div class="daily-quote">
         <div class="quote-icon">🔮</div>
         <p id="dailyQuote">"النجوم لا تخبرك بالمستحيل، بل تخبرك بما هو ممكن"</p>
     </div>
 
     <footer>
-        <div>العرَّاف يضيء دربك، والقرار لك ✦ تواصل مع طاقتك الداخلية</div>
+        <div>العرَّاف يضيء دربك، والقرار لك ✦</div>
         <div class="tiktok-credit">📱 تابعنا على تيك توك: <a href="https://www.tiktok.com/@al3rrafx" target="_blank">tiktok.com/@al3rrafx</a></div>
     </footer>
 </div>
 
-<script src="vendor/jquery.js"></script>
-<script src="vendor/bootstrap.js"></script>
-<script src="js/animations.js"></script>
-<script src="js/api.js"></script>
-<script src="js/sidebar-data.js"></script>
-<script src="js/main.js"></script>
-
 <script>
-    // إنشاء القائمة الجانبية
-    createSidebar();
-    
-    // اقتباسات يومية
+    // ========== النجوم ==========
+    (function createStars() {
+        const container = document.getElementById('starsContainer');
+        if (!container) return;
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.style.position = 'absolute';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.width = Math.random() * 2 + 1 + 'px';
+            star.style.height = star.style.width;
+            star.style.background = 'white';
+            star.style.borderRadius = '50%';
+            star.style.opacity = Math.random() * 0.7 + 0.3;
+            star.style.animation = `twinkle ${Math.random() * 3 + 2}s infinite`;
+            container.appendChild(star);
+        }
+    })();
+
+    // ========== القائمة الجانبية ==========
+    (function createSidebar() {
+        // حذف أي عناصر قديمة
+        const oldSidebar = document.getElementById('sidebar');
+        if (oldSidebar) oldSidebar.remove();
+        const oldToggle = document.getElementById('menuToggle');
+        if (oldToggle) oldToggle.remove();
+        const oldOverlay = document.getElementById('overlay');
+        if (oldOverlay) oldOverlay.remove();
+
+        // القائمة الجانبية
+        const sidebar = document.createElement('div');
+        sidebar.id = 'sidebar';
+        sidebar.className = 'sidebar';
+        sidebar.innerHTML = `
+            <div class="sidebar-header">
+                <img src="images/logo.jpg" alt="العرَّاف" class="sidebar-logo" onerror="this.src='https://via.placeholder.com/65x65/6b2eb3/ffffff?text=A'">
+                <h3>العرَّاف</h3>
+                <button class="sidebar-close" id="closeSidebar">✕</button>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html">🏠 الرئيسية</a></li>
+                <li><a href="pages/zodiac.html">⭐ أسرار برجك</a></li>
+                <li><a href="pages/couples.html">💑 Couples</a></li>
+                <li><a href="pages/daily-horoscope.html">☀️ حظك اليوم</a></li>
+                <li><a href="pages/lucky-numbers.html">🔢 أرقام الحظ</a></li>
+                <li><a href="pages/dream-interpretation.html">💭 تفسير الأحلام</a></li>
+                <li><a href="pages/tarot-reading.html">🎴 قراءة التاروت</a></li>
+                <li><a href="pages/age-calculator.html">📅 احسب عمرك</a></li>
+                <li><a href="pages/luck-game.html">🎲 لعبة الحظ</a></li>
+                <li><a href="pages/blog.html">📚 دليل الأبراج</a></li>
+                <li><a href="pages/vip.html">👑 Al3rraf VIP</a></li>
+                <li><a href="pages/about.html">📖 عن العرَّاف</a></li>
+                <li><a href="pages/contact.html">📞 اتصل بنا</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="tiktok-link">📱 <a href="https://www.tiktok.com/@al3rrafx" target="_blank">tiktok.com/@al3rrafx</a></div>
+            </div>
+        `;
+        document.body.appendChild(sidebar);
+
+        // زر فتح القائمة
+        const toggle = document.createElement('button');
+        toggle.id = 'menuToggle';
+        toggle.className = 'menu-toggle';
+        toggle.innerHTML = '☰';
+        document.body.appendChild(toggle);
+
+        // طبقة الخلفية
+        const overlay = document.createElement('div');
+        overlay.id = 'overlay';
+        overlay.className = 'overlay';
+        document.body.appendChild(overlay);
+
+        // ربط الأحداث
+        const sidebarEl = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('menuToggle');
+        const closeBtn = document.getElementById('closeSidebar');
+        const overlayEl = document.getElementById('overlay');
+
+        function open() {
+            sidebarEl.classList.add('open');
+            overlayEl.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function close() {
+            sidebarEl.classList.remove('open');
+            overlayEl.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        if (toggleBtn) toggleBtn.addEventListener('click', open);
+        if (closeBtn) closeBtn.addEventListener('click', close);
+        if (overlayEl) overlayEl.addEventListener('click', close);
+    })();
+
+    // ========== الاقتباسات ==========
     const quotes = [
         "النجوم لا تخبرك بالمستحيل، بل تخبرك بما هو ممكن",
         "اعرف نفسك، تعرف مستقبلك",
@@ -278,5 +406,6 @@
     ];
     document.getElementById('dailyQuote').textContent = `"${quotes[Math.floor(Math.random() * quotes.length)]}"`;
 </script>
+
 </body>
 </html>
