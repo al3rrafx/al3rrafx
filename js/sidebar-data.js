@@ -1,7 +1,5 @@
 // ========== القائمة الجانبية الموحدة للموقع بالكامل ==========
-// الصفحة دي بتنفع في:
-// - index.html (الرئيسية)
-// - pages/*.html (كل الصفحات الفرعية)
+// شغالة في index.html (الرئيسية) و pages/*.html (كل الصفحات الفرعية)
 
 function createSidebar() {
     // إزالة أي عناصر قديمة لو موجودة (عشان منع التكرار)
@@ -81,25 +79,22 @@ function createSidebar() {
     const closeBtn = document.getElementById('closeSidebar');
     const overlayElem = document.getElementById('overlay');
 
-    // فتح القائمة
     function openSidebar() {
         sidebarElem.classList.add('open');
         overlayElem.classList.add('active');
-        document.body.style.overflow = 'hidden'; // منع التمرير في الخلفية
+        document.body.style.overflow = 'hidden';
     }
 
-    // إغلاق القائمة
     function closeSidebarFunc() {
         sidebarElem.classList.remove('open');
         overlayElem.classList.remove('active');
-        document.body.style.overflow = ''; // إعادة التمرير
+        document.body.style.overflow = '';
     }
 
     if (toggleBtn) toggleBtn.addEventListener('click', openSidebar);
     if (closeBtn) closeBtn.addEventListener('click', closeSidebarFunc);
     if (overlayElem) overlayElem.addEventListener('click', closeSidebarFunc);
 
-    // إغلاق القائمة عند الضغط على زر Escape من الكيبورد
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && sidebarElem && sidebarElem.classList.contains('open')) {
             closeSidebarFunc();
@@ -108,7 +103,6 @@ function createSidebar() {
 
     // --------------------------------------------
     // 6. تفعيل الرابط النشط (Active Link)
-    //    عشان يظهرلك إيه الصفحة اللي انت فيها
     // --------------------------------------------
     setTimeout(() => {
         const currentPath = window.location.pathname;
@@ -133,9 +127,7 @@ function createSidebar() {
         const activeId = linkIds[pageName];
         if (activeId) {
             const activeLink = document.getElementById(activeId);
-            if (activeLink) {
-                activeLink.classList.add('active');
-            }
+            if (activeLink) activeLink.classList.add('active');
         }
     }, 100);
 }
