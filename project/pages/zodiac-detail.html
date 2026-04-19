@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>العرَّاف | تفاصيل البرج</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    
+    <style>
+        /* تثبيت مشاكل الموبايل */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            overflow-x: hidden !important;
+            width: 100% !important;
+        }
+        
+        .container {
+            width: 100% !important;
+            max-width: 100% !important;
+            padding: 0 10px !important;
+            overflow-x: hidden !important;
+        }
+        
+        /* تثبيت شبكة الأزرار في الموبايل */
+        @media (max-width: 768px) {
+            .buttons-grid {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 10px !important;
+            }
+            
+            .magic-card {
+                padding: 10px 5px !important;
+            }
+            
+            .magic-icon {
+                font-size: 1.6rem !important;
+            }
+            
+            .magic-card h3 {
+                font-size: 0.7rem !important;
+            }
+            
+            .magic-card p {
+                display: none !important;
+            }
+            
+            .date-select-group {
+                flex-direction: column !important;
+                gap: 8px !important;
+            }
+            
+            .result-area {
+                font-size: 0.75rem !important;
+                padding: 12px !important;
+            }
+            
+            .share-buttons {
+                flex-wrap: wrap !important;
+                gap: 5px !important;
+            }
+            
+            .share-btn {
+                padding: 4px 8px !important;
+                font-size: 0.6rem !important;
+            }
+            
+            h1 {
+                font-size: 1.5rem !important;
+            }
+            
+            .main-logo, .sidebar-logo {
+                width: 65px !important;
+                height: 65px !important;
+            }
+            
+            .card {
+                padding: 15px !important;
+                border-radius: 25px !important;
+            }
+            
+            .magic-btn {
+                font-size: 0.85rem !important;
+                padding: 10px !important;
+            }
+            
+            input, select {
+                font-size: 14px !important;
+                padding: 10px !important;
+            }
+            
+            /* القائمة الجانبية */
+            .sidebar {
+                width: 260px !important;
+                right: -260px !important;
+            }
+            
+            .menu-toggle {
+                width: 42px !important;
+                height: 42px !important;
+                font-size: 1.3rem !important;
+                top: 12px !important;
+                right: 12px !important;
+            }
+        }
+        
+        /* للأجهزة الصغيرة جداً */
+        @media (max-width: 480px) {
+            .buttons-grid {
+                gap: 8px !important;
+            }
+            
+            .magic-icon {
+                font-size: 1.4rem !important;
+            }
+            
+            .magic-card h3 {
+                font-size: 0.65rem !important;
+            }
+            
+            .sidebar {
+                width: 240px !important;
+                right: -240px !important;
+            }
+        }
+        
+        /* للتابلت */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .buttons-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+            
+            .container {
+                max-width: 90% !important;
+            }
+        }
+        
+        /* للكمبيوتر */
+        @media (min-width: 1025px) {
+            .buttons-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+            
+            .container {
+                max-width: 1000px !important;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="../vendor/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+</head>
+<body>
+
+<!-- القائمة الجانبية -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <img src="../images/logo.jpg" alt="العرَّاف" class="sidebar-logo">
+        <h3>العرَّاف</h3>
+        <button class="sidebar-close" id="closeSidebar">✕</button>
+    </div>
+    <ul class="sidebar-menu">
+        <li><a href="../index.html">🏠 الرئيسية</a></li>
+        <li><a href="zodiac.html">⭐ أسرار برجك</a></li>
+        <li><a href="couples.html">💑 Couples</a></li>
+        <li><a href="daily-horoscope.html">☀️ حظك اليوم</a></li>
+        <li><a href="lucky-numbers.html">🔢 أرقام الحظ</a></li>
+        <li><a href="dream-interpretation.html">💭 تفسير الأحلام</a></li>
+        <li><a href="tarot-reading.html">🎴 قراءة التاروت</a></li>
+        <li><a href="age-calculator.html">📅 احسب عمرك</a></li>
+        <li><a href="luck-game.html">🎲 لعبة الحظ</a></li>
+        <li><a href="blog.html">📚 دليل الأبراج</a></li>
+        <li><a href="vip.html">👑 Al3rraf VIP</a></li>
+        <li><a href="about.html">📖 عن العرَّاف</a></li>
+        <li><a href="contact.html">📞 اتصل بنا</a></li>
+    </ul>
+    <div class="sidebar-footer">
+        <div class="tiktok-link">📱 <a href="https://www.tiktok.com/@al3rrafx" target="_blank">tiktok.com/@al3rrafx</a></div>
+    </div>
+</div>
+
+<button class="menu-toggle" id="menuToggle">☰</button>
+<div class="overlay" id="overlay"></div>
+
+<!-- النجوم والدخان -->
+<div class="stars" id="starsContainer"></div>
+<div class="smoke"></div>
+
+<div class="container">
+    <div class="logo-header">
+        <img src="../images/logo.jpg" alt="العرَّاف" class="main-logo">
+        <h1 id="zodiacTitle">🔮 البرج</h1>
+        <p class="slogan" id="zodiacPeriod">✦ الفترة ✦</p>
+    </div>
+
+    <div class="card" id="zodiacDetails">
+        <!-- التفاصيل ستظهر هنا -->
+        <div style="text-align: center; padding: 50px;">
+            <div class="loader"></div>
+            <p>جاري تحميل بيانات البرج...</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3 style="text-align: center;">✨ هل تعلم؟ ✨</h3>
+        <p id="funFact" style="text-align: center; margin-top: 15px;"></p>
+    </div>
+
+    <footer>
+        <div>العرَّاف يضيء دربك، والقرار لك ✦ تواصل مع طاقتك الداخلية</div>
+        <div class="tiktok-credit">📱 تابعنا على تيك توك: <a href="https://www.tiktok.com/@al3rrafx" target="_blank">tiktok.com/@al3rrafx</a></div>
+    </footer>
+</div>
+
+<script src="../vendor/jquery.js"></script>
+<script src="../vendor/bootstrap.js"></script>
+<script src="../js/animations.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/sidebar.js"></script>
+<script src="../js/main.js"></script>
+
+<script>
+    // إنشاء النجوم
+    createStars();
+    
+    // بيانات الأبراج كاملة
+    const zodiacDetails = {
+        "الحمل": {
+            symbol: "♈", period: "21 مارس – 19 أبريل", element: "النار", planet: "المريخ",
+            traits: "شجاع، قائد، مغامر، متحمس، صريح، مندفع",
+            strengths: "شجاعة، قيادة، حماس، ثقة بالنفس",
+            weaknesses: "اندفاع، نفاد صبر، غضب سريع، عناد",
+            love: "عاطفي وحماسي، يبحث عن شريك يشاركه المغامرات",
+            career: "قيادة، ريادة أعمال، رياضة، جيش، مبيعات",
+            luckyColor: "الأحمر، البرتقالي، الذهبي",
+            luckyNumber: "1, 9, 18, 27",
+            gem: "الياقوت، الماس، العنبر",
+            funFact: "برج الحمل هو أول برج في دائرة الأبراج، ويمثل بداية فصل الربيع!"
+        },
+        "الثور": {
+            symbol: "♉", period: "20 أبريل – 20 مايو", element: "التراب", planet: "الزهرة",
+            traits: "صبور، عملي، مخلص، يحب الجمال، عنيد",
+            strengths: "صبر، إخلاص، موثوقية، حب للجمال",
+            weaknesses: "عناد، تمسك بالروتين، غيرة",
+            love: "وفي وحنون، يبحث عن شريك مستقر وأمان عاطفي",
+            career: "مال، فن، طبخ، تصميم، عقارات",
+            luckyColor: "الأخضر، الزهري، البني",
+            luckyNumber: "2, 6, 15, 24",
+            gem: "الزمرد، العقيق، الفيروز",
+            funFact: "برج الثور يحكمه كوكب الزهرة، كوكب الحب والجمال والفنون!"
+        },
+        "الجوزاء": {
+            symbol: "♊", period: "21 مايو – 20 يونيو", element: "الهواء", planet: "عطارد",
+            traits: "ذكي، فضولي، اجتماعي، متعدد المواهب، متقلب",
+            strengths: "ذكاء، تواصل، مرونة، روح دعابة",
+            weaknesses: "تقلب، تردد، تشتت، عصبية",
+            love: "يحتاج شريك ذكي ومرن، يحب الحوار والضحك",
+            career: "إعلام، تسويق، تعليم، برمجة، كتابة",
+            luckyColor: "الأصفر، الأزرق الفاتح، الفضي",
+            luckyNumber: "3, 12, 21, 30",
+            gem: "العقيق، الزمرد، حجر القمر",
+            funFact: "رمز برج الجوزاء هو التوأم، ويعبر عن ازدواجية الشخصية!"
+        },
+        "السرطان": {
+            symbol: "♋", period: "21 يونيو – 22 يوليو", element: "الماء", planet: "القمر",
+            traits: "حنون، عاطفي، حدسي، مرتبط بالمنزل، حساس",
+            strengths: "ولاء، حنية، حدس قوي، حماية للأسرة",
+            weaknesses: "تقلب مزاج، حساسية زايدة، خوف من الجرح",
+            love: "رومانسي وحنون، يبحث عن شريك يحتويه ويفهم مشاعره",
+            career: "طب، تمريض، طبخ، عقارات، رعاية أطفال",
+            luckyColor: "الفضي، الأبيض، الأزرق الفاتح",
+            luckyNumber: "2, 7, 11, 16",
+            gem: "اللؤلؤ، حجر القمر، الزبرجد",
+            funFact: "السرطان هو البرج الوحيد الذي يحكمه القمر، رمز العواطف والأمومة!"
+        },
+        "الأسد": {
+            symbol: "♌", period: "23 يوليو – 22 أغسطس", element: "النار", planet: "الشمس",
+            traits: "كريم، قائد، واثق، محب للظهور، كريم",
+            strengths: "قيادة، كرم، إبداع، شجاعة، وفاء",
+            weaknesses: "غرور، حب سيطرة، عناد، تبذير",
+            love: "مخلص وعاشق درامي، يبحث عن شريك يعجب به ويقدره",
+            career: "تمثيل، سياسة، إدارة، ترفيه، أزياء",
+            luckyColor: "الذهبي، البرتقالي، الأحمر",
+            luckyNumber: "1, 4, 10, 19",
+            gem: "الياقوت، العنبر، الذهب",
+            funFact: "الأسد هو ملك الأبراج، ويحكمه الشمس، مركز النظام الشمسي!"
+        },
+        "العذراء": {
+            symbol: "♍", period: "23 أغسطس – 22 سبتمبر", element: "التراب", planet: "عطارد",
+            traits: "منظم، دقيق، ناقد، يساعد الآخرين، عملي",
+            strengths: "تحليل، تنظيم، اهتمام بالتفاصيل، إخلاص",
+            weaknesses: "نقد مفرط، قلق، كمالية، تحفظ",
+            love: "عملي ومخلص، يبحث عن شريك نظيف ومنظم ومتفهم",
+            career: "طب، محاسبة، تدقيق، بحث، تحرير، تدريس",
+            luckyColor: "الأخضر الداكن، البيج، الرمادي",
+            luckyNumber: "5, 12, 20, 27",
+            gem: "اليشب، الجزع، العقيق الأحمر",
+            funFact: "العذراء من أكثر الأبراج اهتماماً بالصحة والنظام والترتيب!"
+        },
+        "الميزان": {
+            symbol: "♎", period: "23 سبتمبر – 22 أكتوبر", element: "الهواء", planet: "الزهرة",
+            traits: "دبلوماسي، عادل، اجتماعي، يحب الجمال، متردد",
+            strengths: "دبلوماسية، عدالة، اجتماعية، ذوق رفيع",
+            weaknesses: "تردد، بحث عن الكمال، خوف من الوحدة",
+            love: "رومانسي مثالي، يبحث عن شريك يشاركه الذوق والجمال",
+            career: "قانون، دبلوماسية، تصميم، فن، علاقات عامة",
+            luckyColor: "الوردي، الأزرق السماوي، الأخضر الفاتح",
+            luckyNumber: "6, 9, 15, 24",
+            gem: "الزبرجد، الأوبال، الياقوت الأزرق",
+            funFact: "الميزان هو البرج الوحيد الذي رمزه جماد (الميزان) وليس كائن حي!"
+        },
+        "العقرب": {
+            symbol: "♏", period: "23 أكتوبر – 21 نوفمبر", element: "الماء", planet: "بلوتو",
+            traits: "غامض، قوي، شغوف، مخلص، حاد",
+            strengths: "شغف، إخلاص، حدس قوي، شجاعة، إصرار",
+            weaknesses: "غيرة، تملك، كتمان، حقد",
+            love: "عاطفي بشكل جارف، يبحث عن شريك مخلص 100% ومستعد للشغف",
+            career: "تحقيق، علم نفس، جراحة، أبحاث، عسكرية",
+            luckyColor: "الأسود، الأحمر الداكن، العنابي",
+            luckyNumber: "8, 11, 22, 33",
+            gem: "العقيق، التوباز، الجمشت",
+            funFact: "العقرب من أكثر الأبراج غموضاً وقوة، ويحكمه بلوتو إله العالم السفلي!"
+        },
+        "القوس": {
+            symbol: "♐", period: "22 نوفمبر – 21 ديسمبر", element: "النار", planet: "المشتري",
+            traits: "مغامر، متفائل، صريح، محب للحرية، صريح",
+            strengths: "تفاؤل، حماس، حب مغامرة، صدق، فلسفة",
+            weaknesses: "تهور، عدم مسؤولية، مبالغة، صراحة زايدة",
+            love: "يحتاج شريك يشاركه المغامرة والسفر، يكره الغيرة والتملك",
+            career: "سفر، سياحة، تعليم، تصوير، فلسفة، رياضة",
+            luckyColor: "الأرجواني، الأزرق الملكي، البرتقالي",
+            luckyNumber: "3, 12, 21, 30",
+            gem: "الفيروز، الياقوت الأصفر، اللازورد",
+            funFact: "القوس هو برج الحكمة والفلسفة، ويحكمه المشتري كوكب الحظ والتوسع!"
+        },
+        "الجدي": {
+            symbol: "♑", period: "22 ديسمبر – 19 يناير", element: "التراب", planet: "زحل",
+            traits: "جاد، طموح، منضبط، مسؤول، صبور",
+            strengths: "انضباط، طموح، صبر، مسؤولية، تنظيم",
+            weaknesses: "تشاؤم، عناد، تحكم، جفاف عاطفي",
+            love: "بارد ظاهرياً لكن عميق المشاعر، يبحث عن شريك جاد ومستقر",
+            career: "إدارة، هندسة، سياسة، مال، محاماة",
+            luckyColor: "البني، الأسود، الرصاصي، الأخضر الغامق",
+            luckyNumber: "4, 8, 13, 22",
+            gem: "الجمشت، العقيق الأحمر، الياقوت الأسود",
+            funFact: "الجدي برج طموح جداً، ويحكمه زحل كوكب الانضباط والوقت!"
+        },
+        "الدلو": {
+            symbol: "♒", period: "20 يناير – 18 فبراير", element: "الهواء", planet: "أورانوس",
+            traits: "مبتكر، إنساني، غريب الأطوار، ذكي، متمرد",
+            strengths: "إبداع، إنسانية، ذكاء، استقلالية، تقدمية",
+            weaknesses: "تمرد، انفصال عاطفي، عناد، تقلب",
+            love: "يحتاج شريك يمنحه مساحة وحرية، يكره التملك والغيرة",
+            career: "تكنولوجيا، عمل خيري، فلك، برمجة، اختراعات",
+            luckyColor: "الفضي، الأزرق الكهربائي، الفيروزي",
+            luckyNumber: "4, 11, 22, 29",
+            gem: "الجمشت، الأكوامارين، حجر القمر",
+            funFact: "الدلو هو برج المستقبل والابتكار، ويحكمه أورانوس كوكب الثورة والتغيير!"
+        },
+        "الحوت": {
+            symbol: "♓", period: "19 فبراير – 20 مارس", element: "الماء", planet: "نبتون",
+            traits: "حالم، حدسي، فني، متعاطف، حساس",
+            strengths: "تعاطف، إبداع، حدس، حنية، خيال واسع",
+            weaknesses: "هروب من الواقع، حساسية زايدة، تردد، أوهام",
+            love: "رومانسي خيالي، يبحث عن شريك حساس وواعي ومتفهم",
+            career: "فن، موسيقى، تمريض، روحانيات، إرشاد نفسي",
+            luckyColor: "الأزرق، الأخضر البحري، البنفسجي",
+            luckyNumber: "3, 7, 12, 21",
+            gem: "الياقوت الأزرق، المرجان، حلم البحر",
+            funFact: "الحوت هو آخر برج في دائرة الأبراج، يجمع صفات جميع الأبراج السابقة!"
+        }
+    };
+    
+    // الحصول على اسم البرج من الرابط
+    const urlParams = new URLSearchParams(window.location.search);
+    const zodiacName = urlParams.get('sign');
+    
+    if (zodiacName && zodiacDetails[zodiacName]) {
+        const z = zodiacDetails[zodiacName];
+        
+        // تحديث العنوان
+        document.getElementById('zodiacTitle').innerHTML = `${z.symbol} برج ${zodiacName}`;
+        document.getElementById('zodiacPeriod').innerHTML = `✦ ${z.period} ✦`;
+        document.getElementById('funFact').innerHTML = z.funFact;
+        
+        // عرض التفاصيل
+        document.getElementById('zodiacDetails').innerHTML = `
+            <div style="text-align: center;">
+                <div class="zodiac-main-icon" style="font-size: 5rem;">${z.symbol}</div>
+            </div>
+            
+            <div class="zodiac-info-grid">
+                <div class="info-card">
+                    <h3>🔥 العنصر</h3>
+                    <p>${z.element}</p>
+                </div>
+                <div class="info-card">
+                    <h3>🌍 الكوكب</h3>
+                    <p>${z.planet}</p>
+                </div>
+                <div class="info-card">
+                    <h3>🎨 لون الحظ</h3>
+                    <p>${z.luckyColor}</p>
+                </div>
+                <div class="info-card">
+                    <h3>🔢 أرقام الحظ</h3>
+                    <p>${z.luckyNumber}</p>
+                </div>
+                <div class="info-card">
+                    <h3>💎 الحجر الكريم</h3>
+                    <p>${z.gem}</p>
+                </div>
+            </div>
+            
+            <div class="zodiac-section">
+                <h3>✨ صفات برج ${zodiacName}</h3>
+                <p>${z.traits}</p>
+            </div>
+            
+            <div class="zodiac-section">
+                <h3>💪 نقاط القوة</h3>
+                <p>${z.strengths}</p>
+            </div>
+            
+            <div class="zodiac-section">
+                <h3>⚠️ نقاط الضعف</h3>
+                <p>${z.weaknesses}</p>
+            </div>
+            
+            <div class="zodiac-section">
+                <h3>💖 الحب والعاطفة</h3>
+                <p>${z.love}</p>
+            </div>
+            
+            <div class="zodiac-section">
+                <h3>💼 العمل والنجاح</h3>
+                <p>${z.career}</p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="blog.html" class="magic-btn" style="display: inline-block; width: auto; padding: 10px 30px;">🔙 العودة إلى دليل الأبراج</a>
+            </div>
+        `;
+    } else {
+        document.getElementById('zodiacDetails').innerHTML = `
+            <div style="text-align: center; padding: 40px;">
+                <h2>⚠️ برج غير موجود</h2>
+                <p>البرج الذي تبحث عنه غير موجود في قاعدة البيانات.</p>
+                <a href="blog.html" class="magic-btn" style="display: inline-block; width: auto; margin-top: 20px;">🔙 العودة إلى دليل الأبراج</a>
+            </div>
+        `;
+    }
+</script>
+
+<style>
+    .zodiac-info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+        margin: 25px 0;
+    }
+    .info-card {
+        background: rgba(184, 126, 255, 0.1);
+        border-radius: 20px;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid rgba(184, 126, 255, 0.2);
+    }
+    .info-card h3 {
+        color: #b87eff;
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+    .info-card p {
+        font-size: 0.9rem;
+        color: #e0d6ff;
+    }
+    .zodiac-section {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 25px;
+        padding: 18px;
+        margin-bottom: 20px;
+        border-right: 3px solid #b87eff;
+    }
+    .zodiac-section h3 {
+        color: #d4bbff;
+        margin-bottom: 10px;
+    }
+    .zodiac-main-icon {
+        animation: iconPulse 2s infinite;
+    }
+</style>
+</body>
+</html>
