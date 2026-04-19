@@ -1,0 +1,190 @@
+/* القائمة الجانبية */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 280px;
+    height: 100vh;
+    background: linear-gradient(180deg, #0a081a, #120e2a);
+    backdrop-filter: blur(20px);
+    z-index: 9999;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+    border-left: 1px solid rgba(184, 126, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #1a1535;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #b87eff;
+    border-radius: 10px;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar-header {
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(184, 126, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
+    background: #0a081a;
+}
+
+.sidebar-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid #b87eff;
+    box-shadow: 0 0 15px rgba(184, 126, 255, 0.5);
+}
+
+.sidebar-header h3 {
+    color: #b87eff;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.sidebar-close {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    color: #b87eff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    z-index: 10;
+}
+
+.sidebar-close:hover {
+    transform: scale(1.2);
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 15px 0;
+    flex: 1;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin: 3px 0;
+}
+
+.sidebar-menu li a {
+    display: block;
+    padding: 12px 25px;
+    color: #e0d6ff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border-right: 3px solid transparent;
+}
+
+.sidebar-menu li a:hover {
+    background: rgba(184, 126, 255, 0.15);
+    border-right-color: #b87eff;
+    padding-right: 30px;
+}
+
+.sidebar-menu li a.active {
+    background: rgba(184, 126, 255, 0.2);
+    border-right-color: #b87eff;
+    color: #b87eff;
+}
+
+.sidebar-footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(184, 126, 255, 0.2);
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    background: #0a081a;
+}
+
+.sidebar-footer .tiktok-link a {
+    color: #b87eff;
+    text-decoration: none;
+}
+
+.sidebar-footer .tiktok-link a:hover {
+    text-decoration: underline;
+}
+
+/* زر فتح القائمة */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #6b2eb3, #391d66);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 9998;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #7e3dcc, #4a267a);
+}
+
+/* طبقة خلفية غامقة */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9997;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 260px;
+        right: -260px;
+    }
+    
+    .menu-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+        top: 15px;
+        right: 15px;
+    }
+    
+    .sidebar-menu li a {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
