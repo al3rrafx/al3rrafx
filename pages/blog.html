@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>العرَّاف | دليل الأبراج</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    
+    <style>
+        /* تثبيت مشاكل الموبايل */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            overflow-x: hidden !important;
+            width: 100% !important;
+        }
+        
+        .container {
+            width: 100% !important;
+            max-width: 100% !important;
+            padding: 0 10px !important;
+            overflow-x: hidden !important;
+        }
+        
+        /* تثبيت شبكة الأزرار في الموبايل */
+        @media (max-width: 768px) {
+            .buttons-grid {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 10px !important;
+            }
+            
+            .magic-card {
+                padding: 10px 5px !important;
+            }
+            
+            .magic-icon {
+                font-size: 1.6rem !important;
+            }
+            
+            .magic-card h3 {
+                font-size: 0.7rem !important;
+            }
+            
+            .magic-card p {
+                display: none !important;
+            }
+            
+            .date-select-group {
+                flex-direction: column !important;
+                gap: 8px !important;
+            }
+            
+            .result-area {
+                font-size: 0.75rem !important;
+                padding: 12px !important;
+            }
+            
+            .share-buttons {
+                flex-wrap: wrap !important;
+                gap: 5px !important;
+            }
+            
+            .share-btn {
+                padding: 4px 8px !important;
+                font-size: 0.6rem !important;
+            }
+            
+            h1 {
+                font-size: 1.5rem !important;
+            }
+            
+            .main-logo, .sidebar-logo {
+                width: 65px !important;
+                height: 65px !important;
+            }
+            
+            .card {
+                padding: 15px !important;
+                border-radius: 25px !important;
+            }
+            
+            .magic-btn {
+                font-size: 0.85rem !important;
+                padding: 10px !important;
+            }
+            
+            input, select {
+                font-size: 14px !important;
+                padding: 10px !important;
+            }
+            
+            /* القائمة الجانبية */
+            .sidebar {
+                width: 260px !important;
+                right: -260px !important;
+            }
+            
+            .menu-toggle {
+                width: 42px !important;
+                height: 42px !important;
+                font-size: 1.3rem !important;
+                top: 12px !important;
+                right: 12px !important;
+            }
+        }
+        
+        /* للأجهزة الصغيرة جداً */
+        @media (max-width: 480px) {
+            .buttons-grid {
+                gap: 8px !important;
+            }
+            
+            .magic-icon {
+                font-size: 1.4rem !important;
+            }
+            
+            .magic-card h3 {
+                font-size: 0.65rem !important;
+            }
+            
+            .sidebar {
+                width: 240px !important;
+                right: -240px !important;
+            }
+        }
+        
+        /* للتابلت */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .buttons-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+            
+            .container {
+                max-width: 90% !important;
+            }
+        }
+        
+        /* للكمبيوتر */
+        @media (min-width: 1025px) {
+            .buttons-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+            
+            .container {
+                max-width: 1000px !important;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="../vendor/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+</head>
+<body>
+
+<!-- القائمة الجانبية -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <img src="../images/logo.jpg" alt="العرَّاف" class="sidebar-logo">
+        <h3>العرَّاف</h3>
+        <button class="sidebar-close" id="closeSidebar">✕</button>
+    </div>
+    <ul class="sidebar-menu">
+        <li><a href="../index.html">🏠 الرئيسية</a></li>
+        <li><a href="zodiac.html">⭐ أسرار برجك</a></li>
+        <li><a href="couples.html">💑 Couples</a></li>
+        <li><a href="daily-horoscope.html">☀️ حظك اليوم</a></li>
+        <li><a href="lucky-numbers.html">🔢 أرقام الحظ</a></li>
+        <li><a href="dream-interpretation.html">💭 تفسير الأحلام</a></li>
+        <li><a href="tarot-reading.html">🎴 قراءة التاروت</a></li>
+        <li><a href="age-calculator.html">📅 احسب عمرك</a></li>
+        <li><a href="luck-game.html">🎲 لعبة الحظ</a></li>
+        <li><a href="blog.html">📚 دليل الأبراج</a></li>
+        <li><a href="vip.html">👑 Al3rraf VIP</a></li>
+        <li><a href="about.html">📖 عن العرَّاف</a></li>
+        <li><a href="contact.html">📞 اتصل بنا</a></li>
+    </ul>
+    <div class="sidebar-footer">
+        <div class="tiktok-link">📱 <a href="https://www.tiktok.com/@al3rrafx" target="_blank">tiktok.com/@al3rrafx</a></div>
+    </div>
+</div>
+
+<button class="menu-toggle" id="menuToggle">☰</button>
+<div class="overlay" id="overlay"></div>
+
+<!-- النجوم والدخان -->
+<div class="stars" id="starsContainer"></div>
+<div class="smoke"></div>
+
+<div class="container">
+    <div class="logo-header">
+        <img src="../images/logo.jpg" alt="العرَّاف" class="main-logo">
+        <h1>📚 دليل الأبراج</h1>
+        <p class="slogan">✦ تعرف على صفات كل برج وأسراره ✦</p>
+    </div>
+
+    <!-- شبكة الأبراج - 12 زر -->
+    <div class="buttons-grid zodiac-grid">
+        <a href="zodiac-detail.html?sign=الحمل" class="magic-card zodiac-card">
+            <div class="magic-icon">♈</div>
+            <h3>الحمل</h3>
+            <p>21 مارس - 19 أبريل</p>
+            <span class="zodiac-element fire">🔥 ناري</span>
+        </a>
+
+        <a href="zodiac-detail.html?sign=الثور" class="magic-card zodiac-card">
+            <div class="magic-icon">♉</div>
+            <h3>الثور</h3>
+            <p>20 أبريل - 20 مايو</p>
+            <span class="zodiac-element earth">🌍 ترابي</span>
+        </a>
+
+        <a href="zodiac-detail.html?sign=الجوزاء" class="magic-card zodiac-card">
+            <div class="magic-icon">♊</div>
+            <h3>الجوزاء</h3>
+            <p>21 مايو - 20 يونيو</p>
+            <span class="zodiac-element air">💨 هوائي</span>
+        </a>
+
+        <a href="zodiac-detail.html?sign=السرطان" class="magic-card zodiac-card">
+            <div class="magic-icon">♋</div>
+            <h3>السرطان</h3>
+            <p>21 يونيو - 22 يوليو</p>
+            <span class="zodiac-element water">💧 مائي</span>
+        </a>
+
+        <a href="zodiac-detail.html?sign=الأسد" class="magic-card zodiac-card">
+            <div class="magic-icon">♌</div>
+            <h3>الأسد</h3>
+            <p>23 يوليو - 22 أغسطس</p>
+            <span class="zodiac-element fire">🔥 ناري</span>
+        </a>
+
+        <a href="zodiac-detail.html?sign=العذراء" class="magic-card zodiac-card">
+            <div class="magic-icon">♍</div>
+            <h3>العذراء</h3>
+            <p>23 أغسطس - 22 سبتمبر</p>
+            <span class="zodiac-element earth">🌍 ترابي</span>
+        </a>
+
+        <a href="zodiac-detail.html?sign=الميزان" class="magic-card zodiac-card">
+            <div class="magic-icon">♎</div>
+            <h3>الميزان</h3>
+            <p>23 سبتمبر - 22 أكتوبر</p>
+            <span class="zodiac-element air">💨 هوائي</span>
+        </a>
+
+        <a href="zodiac-detail.html?sign=العقرب" class="magic-card zodiac-card">
+            <div class="magic-icon">♏</div>
+            <h3>العقرب</h3>
+            <p>23 أكتوبر - 21 نوفمبر</p>
+            <span class="zodiac-element water">💧 مائي</span>
+        </a>
+
+        <a href="zodiac-detail.html?sign=القوس" class="magic-card zodiac-card">
+            <div class="magic-icon">♐</div>
+            <h3>القوس</h3>
+            <p>22 نوفمبر - 21 ديسمبر</p>
+            <span class="zodiac-element fire">🔥 ناري</span>
+        </a>
+
+        <a href="zodiac-detail.html?sign=الجدي" class="magic-card zodiac-card">
+            <div class="magic-icon">♑</div>
+            <h3>الجدي</h3>
+            <p>22 ديسمبر - 19 يناير</p>
+            <span class="zodiac-element earth">🌍 ترابي</span>
+        </a>
+
+        <a href="zodiac-detail.html?sign=الدلو" class="magic-card zodiac-card">
+            <div class="magic-icon">♒</div>
+            <h3>الدلو</h3>
+            <p>20 يناير - 18 فبراير</p>
+            <span class="zodiac-element air">💨 هوائي</span>
+        </a>
+
+        <a href="zodiac-detail.html?sign=الحوت" class="magic-card zodiac-card">
+            <div class="magic-icon">♓</div>
+            <h3>الحوت</h3>
+            <p>19 فبراير - 20 مارس</p>
+            <span class="zodiac-element water">💧 مائي</span>
+        </a>
+    </div>
+
+    <footer>
+        <div>العرَّاف يضيء دربك، والقرار لك ✦ تواصل مع طاقتك الداخلية</div>
+        <div class="tiktok-credit">📱 تابعنا على تيك توك: <a href="https://www.tiktok.com/@al3rrafx" target="_blank">tiktok.com/@al3rrafx</a></div>
+    </footer>
+</div>
+
+<script src="../vendor/jquery.js"></script>
+<script src="../vendor/bootstrap.js"></script>
+<script src="../js/animations.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/sidebar.js"></script>
+<script src="../js/main.js"></script>
+
+<script>
+    // إنشاء النجوم
+    createStars();
+</script>
+
+<style>
+    .zodiac-card {
+        text-align: center;
+    }
+    .zodiac-element {
+        display: inline-block;
+        font-size: 0.7rem;
+        padding: 3px 10px;
+        border-radius: 20px;
+        margin-top: 8px;
+    }
+    .zodiac-element.fire {
+        background: rgba(255, 69, 0, 0.2);
+        color: #ff6b35;
+        border: 1px solid #ff6b35;
+    }
+    .zodiac-element.earth {
+        background: rgba(34, 139, 34, 0.2);
+        color: #4caf50;
+        border: 1px solid #4caf50;
+    }
+    .zodiac-element.air {
+        background: rgba(135, 206, 235, 0.2);
+        color: #5bc0ff;
+        border: 1px solid #5bc0ff;
+    }
+    .zodiac-element.water {
+        background: rgba(30, 144, 255, 0.2);
+        color: #4a9eff;
+        border: 1px solid #4a9eff;
+    }
+    .zodiac-grid .magic-card {
+        padding: 20px 15px;
+    }
+    .zodiac-grid .magic-icon {
+        font-size: 2.5rem;
+    }
+    .zodiac-grid h3 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+    .zodiac-grid p {
+        font-size: 0.7rem;
+    }
+</style>
+</body>
+</html>
