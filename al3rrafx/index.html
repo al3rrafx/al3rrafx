@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>العرَّاف | الرئيسية</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    
+    <style>
+        /* تثبيت مشاكل الموبايل */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            overflow-x: hidden !important;
+            width: 100% !important;
+        }
+        
+        .container {
+            width: 100% !important;
+            max-width: 100% !important;
+            padding: 0 10px !important;
+            overflow-x: hidden !important;
+        }
+        
+        /* تثبيت شبكة الأزرار في الموبايل */
+        @media (max-width: 768px) {
+            .buttons-grid {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 10px !important;
+            }
+            
+            .magic-card {
+                padding: 10px 5px !important;
+            }
+            
+            .magic-icon {
+                font-size: 1.6rem !important;
+            }
+            
+            .magic-card h3 {
+                font-size: 0.7rem !important;
+            }
+            
+            .magic-card p {
+                display: none !important;
+            }
+            
+            .date-select-group {
+                flex-direction: column !important;
+                gap: 8px !important;
+            }
+            
+            .result-area {
+                font-size: 0.75rem !important;
+                padding: 12px !important;
+            }
+            
+            .share-buttons {
+                flex-wrap: wrap !important;
+                gap: 5px !important;
+            }
+            
+            .share-btn {
+                padding: 4px 8px !important;
+                font-size: 0.6rem !important;
+            }
+            
+            h1 {
+                font-size: 1.5rem !important;
+            }
+            
+            .main-logo, .sidebar-logo {
+                width: 65px !important;
+                height: 65px !important;
+            }
+            
+            .card {
+                padding: 15px !important;
+                border-radius: 25px !important;
+            }
+            
+            .magic-btn {
+                font-size: 0.85rem !important;
+                padding: 10px !important;
+            }
+            
+            input, select {
+                font-size: 14px !important;
+                padding: 10px !important;
+            }
+            
+            /* القائمة الجانبية */
+            .sidebar {
+                width: 260px !important;
+                right: -260px !important;
+            }
+            
+            .menu-toggle {
+                width: 42px !important;
+                height: 42px !important;
+                font-size: 1.3rem !important;
+                top: 12px !important;
+                right: 12px !important;
+            }
+        }
+        
+        /* للأجهزة الصغيرة جداً */
+        @media (max-width: 480px) {
+            .buttons-grid {
+                gap: 8px !important;
+            }
+            
+            .magic-icon {
+                font-size: 1.4rem !important;
+            }
+            
+            .magic-card h3 {
+                font-size: 0.65rem !important;
+            }
+            
+            .sidebar {
+                width: 240px !important;
+                right: -240px !important;
+            }
+        }
+        
+        /* للتابلت */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .buttons-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+            
+            .container {
+                max-width: 90% !important;
+            }
+        }
+        
+        /* للكمبيوتر */
+        @media (min-width: 1025px) {
+            .buttons-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+            
+            .container {
+                max-width: 1000px !important;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="vendor/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+</head>
+<body>
+
+<div class="stars" id="starsContainer"></div>
+<div class="smoke"></div>
+
+<div class="container">
+    <div class="logo-header">
+        <img src="images/logo.jpg" alt="العرَّاف" class="main-logo">
+        <h1>🔮 العرَّاف</h1>
+        <p class="slogan">✦ أسرار برجك وطاقة روحك ✦</p>
+    </div>
+
+    <!-- الأزرار الرئيسية 12 زر -->
+    <div class="buttons-grid">
+        <a href="pages/zodiac.html" class="magic-card">
+            <div class="magic-icon">⭐</div>
+            <h3>أسرار برجك</h3>
+            <p>اكتشف شخصيتك ومستقبلك</p>
+        </a>
+
+        <a href="pages/couples.html" class="magic-card">
+            <div class="magic-icon">💑</div>
+            <h3>Couples</h3>
+            <p>توافق الأبراج والحب</p>
+        </a>
+
+        <a href="pages/daily-horoscope.html" class="magic-card">
+            <div class="magic-icon">☀️</div>
+            <h3>حظك اليوم</h3>
+            <p>توقعات يومية محدثة</p>
+        </a>
+
+        <a href="pages/lucky-numbers.html" class="magic-card">
+            <div class="magic-icon">🔢</div>
+            <h3>أرقام الحظ</h3>
+            <p>أرقامك المحظوظة اليوم</p>
+        </a>
+
+        <a href="pages/dream-interpretation.html" class="magic-card">
+            <div class="magic-icon">💭</div>
+            <h3>تفسير الأحلام</h3>
+            <p>اعرف معنى حلمك</p>
+        </a>
+
+        <a href="pages/tarot-reading.html" class="magic-card">
+            <div class="magic-icon">🎴</div>
+            <h3>قراءة التاروت</h3>
+            <p>بطاقات التاروت تكشف المستقبل</p>
+        </a>
+
+        <a href="pages/age-calculator.html" class="magic-card">
+            <div class="magic-icon">📅</div>
+            <h3>احسب عمرك</h3>
+            <p>كم يوماً تعيش على الأرض؟</p>
+        </a>
+
+        <a href="pages/luck-game.html" class="magic-card">
+            <div class="magic-icon">🎲</div>
+            <h3>لعبة الحظ</h3>
+            <p>اكتشف ما يخفيه مستقبلك</p>
+        </a>
+        <a href="pages/blog.html" class="magic-card">
+            <div class="magic-icon">📚</div>
+             <h3>دليل الأبراج</h3>
+            <p>تعرف على صفات كل برج وأسراره</p>
+        </a>
+        <a href="pages/vip.html" class="magic-card vip-card">
+            <div class="magic-icon">👑</div>
+            <h3>Al3rraf VIP</h3>
+            <p>خدمات حصرية ومميزة</p>
+        </a>
+
+        <a href="pages/about.html" class="magic-card">
+            <div class="magic-icon">📖</div>
+            <h3>عن العرَّاف</h3>
+            <p>تعرف علينا أكثر</p>
+        </a>
+
+        <a href="pages/contact.html" class="magic-card">
+            <div class="magic-icon">📞</div>
+            <h3>اتصل بنا</h3>
+            <p>تواصل معنا</p>
+        </a>
+
+    </div>
+
+    <!-- اقتباس يومي -->
+    <div class="daily-quote">
+        <div class="quote-icon">🔮</div>
+        <p id="dailyQuote">"النجوم لا تخبرك بالمستحيل، بل تخبرك بما هو ممكن"</p>
+    </div>
+
+    <footer>
+        <div>العرَّاف يضيء دربك، والقرار لك ✦ تواصل مع طاقتك الداخلية</div>
+        <div class="tiktok-credit">📱 تابعنا على تيك توك: <a href="https://www.tiktok.com/@al3rrafx" target="_blank">tiktok.com/@al3rrafx</a></div>
+    </footer>
+</div>
+
+<script src="vendor/jquery.js"></script>
+<script src="vendor/bootstrap.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/api.js"></script>
+<script src="js/sidebar-data.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+    // إنشاء القائمة الجانبية
+    createSidebar();
+    
+    // اقتباسات يومية
+    const quotes = [
+        "النجوم لا تخبرك بالمستحيل، بل تخبرك بما هو ممكن",
+        "اعرف نفسك، تعرف مستقبلك",
+        "الحظ يفضل العقول المستعدة",
+        "الكون يتحدث إليك، هل تستمع؟",
+        "كل يوم هو صفحة جديدة في كتاب قدرك"
+    ];
+    document.getElementById('dailyQuote').textContent = `"${quotes[Math.floor(Math.random() * quotes.length)]}"`;
+</script>
+</body>
+</html>
